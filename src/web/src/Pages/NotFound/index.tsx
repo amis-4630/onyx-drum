@@ -1,9 +1,11 @@
+import Layout from "../../Components/Layout";
+
 const NotFound : React.FC = () => {
     return (
-        <div>
+        <Layout>
             <h1>Not Found</h1>
             {/* Add your content here */}
-        </div>
+        </Layout>
     );
 };
 
