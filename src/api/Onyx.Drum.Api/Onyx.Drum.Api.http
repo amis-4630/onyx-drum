@@ -1,0 +1,6 @@
+@Onyx.Drum.Api_HostAddress = http://localhost:5233
+
+GET {{Onyx.Drum.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
