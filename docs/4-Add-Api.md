@@ -2,10 +2,11 @@
 
 ## Create the API
 
-1. Naviate to root folder of the project and run the following command to add the API to the project.
+1. Naviate to root dir of the project and run the following command to add
 
    ```bash
-   dotnet new webapi -n [CODE_NAME].Api
+   cd /src/api
+   dotnet new sln -n [CODE_NAME].sln
    ```
 
 1. Delete .gitkeep file from the newly created project.
@@ -14,6 +15,12 @@
 
    ```bash
    dotnet new gitignore
+   ```
+
+1. 1. the API to the project.
+
+   ```bash
+   dotnet new webapi -n [CODE_NAME].Api
    ```
 
 1. Remove the fucking Weather API
