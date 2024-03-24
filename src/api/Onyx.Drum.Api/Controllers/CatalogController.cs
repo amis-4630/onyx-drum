@@ -10,7 +10,6 @@ namespace Onyx.Drum.Api.Controllers
         [HttpGet]
         public IActionResult GetItems()
         {
-
             var items = new[]
             {
                 new Item("Item 1", "Description 1", "Brand 1", 100.00m),
@@ -20,6 +19,41 @@ namespace Onyx.Drum.Api.Controllers
 
             };
             return Ok(items);
+        }
+
+        [HttpGet("{id:int}")]
+        public IActionResult GetItem(int id)
+        {
+            var item = new Item("Item 1", "Description 1", "Brand 1", 100.00m)
+            {
+                Id = id
+            };
+
+            return Ok(item);
+        }
+
+        [HttpPost]
+        public IActionResult CreateItem(Item item)
+        {
+            return CreatedAtAction(nameof(GetItem), new { id = 42 }, item);
+        }
+
+        [HttpPost("{id:int}/ratings")]
+        public IActionResult AddRating(int id, Rating rating)
+        {
+            return Ok();
+        }
+
+        [HttpPut("{id:int}")]
+        public IActionResult UpdateItem(int id, Item item)
+        {
+            return NoContent();
+        }
+
+        [HttpDelete("{id:int}")]
+        public IActionResult DeleteItem(int id)
+        {
+            return NoContent();
         }
     }
 }
