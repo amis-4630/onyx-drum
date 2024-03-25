@@ -8,7 +8,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<StoreContext>(options =>
 {
     options.UseSqlite("Data Source=../store.db",
-    m => m.MigrationsAssembly("Onyx.Drum.Data")); //use the name data project of your data project
+    m => m.MigrationsAssembly("Onyx.Drum.Api")); //use the name of your api project
 });
 
 builder.Services.AddSwaggerGen(c =>
