@@ -35,8 +35,12 @@ PUT http://localhost:5264/api/catalog/2 HTTP/1.1
 Content-Type: application/json
 
 {
+  "id": 2,
   "name": "New Name",
   "description": "New description",
   "brand": "New brand",
   "price": 120.0
 }
+
+### DELETE an item  
+DELETE http://localhost:5264/api/catalog/8 HTTP/1.1
