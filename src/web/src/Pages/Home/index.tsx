@@ -5,7 +5,6 @@ const Home: React.FC = () => {
         <div>
         <Layout>    
             <h1>Home</h1>
-            {/* Add your content here */}
         </Layout>
         </div>        
     );
