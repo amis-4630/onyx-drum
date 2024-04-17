@@ -8,7 +8,7 @@ const Home: React.FC = () => {
     const [products, setProducts] = useState<Product[]>([]);
 
     useEffect(() => {
-        axios.get<Product[]>("http://localhost:5264/api/catalog/", { 
+        axios.get<Product[]>("https://localhost:5001/api/catalog/", { 
             headers: { 
                 "Content-Type": "application/json", 
             },
