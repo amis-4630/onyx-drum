@@ -11,6 +11,16 @@ builder.Services.AddDbContext<StoreContext>(options =>
     m => m.MigrationsAssembly("Onyx.Drum.Api")); //use the name of your api project
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins("http://localhost:5173")
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
+
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your Project Name API", Version = "v1" });
@@ -23,6 +33,7 @@ app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your Project Name API V1");
 });
+app.UseCors();
 
 app.MapControllers();
 
