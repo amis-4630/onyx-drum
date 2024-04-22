@@ -25,7 +25,9 @@
 - install axios
   - `npm install axios`
   - call api from Home
+  - use https
+    - `dotnet run --urls=https://localhost:5001`
   - CORS error
   - add CORS to API
 
-### CORS setup
+## Card Component
